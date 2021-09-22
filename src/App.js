@@ -12,7 +12,7 @@ function App() {
   const [employeeList, setEmployeeList] = useState([])
 
   const addEmployee = () => {
-    Axios.post('https://hr-system-sql.herokuapp.com//create', {
+    Axios.post('https://hr-system-sql.herokuapp.com/create', {
       firstName: firstName,
       lastName: lastName,
       age: age,
@@ -32,7 +32,7 @@ function App() {
   }
 
   const getEmployees = () => {
-    Axios.get('https://hr-system-sql.herokuapp.com//employees')
+    Axios.get('https://hr-system-sql.herokuapp.com/employees')
     .then((res) => {
       setEmployeeList(res.data)
     })
